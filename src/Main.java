@@ -23,7 +23,6 @@ public class Main {
         smallGraph.dfs(0);
         System.out.println();
 
-        // ВЫЗОВ НАШЕГО БОНУСНОГО МЕТОДА ДЕЙКСТРЫ
         smallGraph.dijkstra(0);
 
         System.out.println("\n--- Performance Tests ---");
