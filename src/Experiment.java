@@ -16,10 +16,17 @@ public class Experiment {
         for (int size : sizes) {
             System.out.println("\n--- Graph Size: " + size + " ---");
             Graph g = new Graph(false);
-            for (int i = 0; i < size; i++) g.addVertex(new Vertex(i));
+
+            for (int i = 0; i < size; i++) {
+                g.addVertex(new Vertex(i));
+            }
+
             for (int i = 0; i < size - 1; i++) {
-                g.addEdge(i, i + 1);
-                if (i + 2 < size) g.addEdge(i, i + 2);
+                g.addEdge(i, i + 1, 1);
+
+                if (i + 2 < size) {
+                    g.addEdge(i, i + 2, 1);
+                }
             }
             runTraversals(g, 0);
         }
